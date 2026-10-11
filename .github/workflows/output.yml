@@ -10,4 +10,4 @@ jobs:
       - name: Output Event
         run: |
           echo "${{ github.event.issue.title }}"
-          echo "${{ github.event }}"
+          echo "${{ toJson(github.event) }}"

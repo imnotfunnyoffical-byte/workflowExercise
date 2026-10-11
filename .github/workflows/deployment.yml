@@ -36,7 +36,7 @@ jobs:
           echo "Lint completed"
 
   deploy:
-    needs: test
+    needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
